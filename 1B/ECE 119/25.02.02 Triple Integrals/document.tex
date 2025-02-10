@@ -1,0 +1,72 @@
+\documentclass[12pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage{algolrevived}
+\begin{document}
+	{\centering \huge \bf Triple Integrals \par}
+	\vspace{10pt}
+	\noindent {\large \bf EX:}
+	\vspace{10pt}
+	
+	 \noindent Let R denote the region in the first octant $(x,y,z >= 0)$ bounded between the planes $x + y + z = 1$ and $2x+2y+z = 2$.
+	
+	\vspace{20pt}
+	
+	\noindent {\large \bf Solution}: 
+	\vspace{20pt}
+	
+	\noindent - Sketch the region of R
+	
+	\vspace{20pt}
+	
+	\noindent - Determine the volume of R:
+	\vspace{10pt}
+		
+	$V = \int\int_R\int dV = \int_0^1\int_0^{1-x}\int_{1-x-y}^{2(1-x-y)} dzdydx$
+	\vspace{10pt}
+		
+	$= \int_0^1\int_0^{1-x} z \int_{1-x-y}^{2(1-x-y)} dzdy = \int_0^1\int_0^{1-x}
+	 (1-x-y) dy dx$
+	 \vspace{10pt}
+		
+	$= \int_0^1[(1-x)y-\frac{1}{2}y^2]$ from $0$ to $1-x$  $dx$
+	\vspace{20pt}
+	
+	
+	\noindent - Determine the average value of $f(x,y,z)=z$ over the region R:
+	\vspace{10pt}
+	
+	Recall: $f_{average} = \frac{1}{volume(R)} \int\int_R\int(x,y,z)dV = \frac{1}{1/6} \int_0^1\int_0^{1-x}\int_{1-x-y}^{2(1-x-y)} zdzdydx$
+	\vspace{10pt}
+		
+	$= 6 \int_0^1\int_0^{1-x}\frac{1}{2}z^2$ from $1-x-y$ to $2(1-x-y)$ $dydx$
+	\vspace{10pt}
+		
+	$= 9 \int_0^1\int_0^{1-x}\frac{1}{2}z^2 (1-x-y)^2 dydx =...= \frac{3}{4}$
+	\vspace{30pt}
+	
+	\noindent {\large \bf EX:}
+	\vspace{10pt}
+	
+	\noindent Compute the volume of the solid under the paraboloid $z=9-x^2-y^2$, outside the cylinder $x^2+y^2=1$, and above the $xy$ plane.
+	
+	\vspace{20pt}
+	
+	\noindent {\large \bf Solution}: 
+	\vspace{20pt}
+	
+	\noindent - Sketch the region R:
+	
+	\noindent In the $xy$ plane, there is an outer circle $x^2+y^2=9$ and an inner circle $x^2+y^2=1$. We are interested in the area between the inner and outer circles.
+	
+	\vspace{20pt}
+	
+	\noindent $V = \int\int_R\int dV = \int_0^{2\pi}\int_1^3\int_0^{9-r^2} rdzdrd\theta = \int_0^{2\pi}d\theta\int_1^3rz\int_0^{9-r^2} dr$ 
+	
+	\vspace{10pt}
+	
+	\noindent $= 2\pi \int_1^3r(9-r^2)dr = 2\pi\int_1^3[9r-r^3]dr = 2\pi[\frac{9}{2}r^2-\frac{1}{4}r^4]$ from 1 to 3 $=..=32\pi$
+	\vspace{10pt}
+	
+	
+	
+\end{document}
